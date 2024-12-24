@@ -185,4 +185,30 @@
 
 # # print(python.index("Java")) # index()는 없는 값을 입력 시 에러 발생 후 종료
 # print(python.count("n")) # count() 존재하는 문자 개수 반환 2
- 
+
+# - 문자열 포맷
+# print("a" + "b")
+# print("a", "b")
+
+# 방법 1  % 
+# print("나는 %d살입니다." % 20) # %d = % 정수
+# print("나는 %s를 좋아해요." % "파이썬") # %s = % 문자열
+# print("Apple 은 %c로 시작해요." % "A") # %c = % 문자 하나 (Character)
+# %s 로 출력하면 문자열이 아닌 다른 자료형(ex- 정수형)을 넣어도 에러 안생김
+# print("나는 %s살입니다." % 20)
+# print("나는 %s색과 %s색을 좋아해요." % ("파란", "빨간")) # 여러개 입력
+
+# 방법 2  format() 
+# print("나는 {}살 입니다.".format(20))
+# print("나는 {}색과 {}색을 좋아해요".format("파란", "빨간"))
+# print("나는 {0}색과 {1}색을 좋아해요".format("파란", "빨간")) # 숫자로 format() 안의 문자열 순서 지정
+# print("나는 {1}색과 {0}색을 좋아해요".format("파란", "빨간")) # 빨간(1) 파란(0) 순으로 출력
+
+# 방법 3  format() 변수 사용
+# print("나는 {age}살이며, {color}색을 좋아해요".format(age = 20, color="빨간"))
+# print("나는 {age}살이며, {color}색을 좋아해요".format(color="빨간", age = 20))
+
+# 방법 4 (v3.6 이상~) f"" 변수 사용
+age = 20
+color = "빨간"
+print(f"나는 {age}살이며, {color}색을 좋아해요")
