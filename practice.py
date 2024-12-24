@@ -168,3 +168,21 @@
 # print("뒤 7자리 (뒤에부터): " + jumin[-7:]) # 맨 뒤(-1)에서 7번째부터 끝까지
 
 # - 문자열 처리함수
+# python = "Python is Amazing"
+# print(python.lower()) # lower() 모든 문자 소문자로 변환
+# print(python.upper()) # upper() 모든 문자 대문자로 변환
+# print(python[0].isupper()) # 첫번째 값이 대문자인지 확인 False
+# print(len(python)) # len() 문자열 길이 반환 17
+# print(python.replace("Python", "Java")) # replace("찾는 문자", "바꿀 문자") 문자 바꾸기
+
+# index = python.index("n") # index() 인덱스 위치 값 찾기
+# print(index) # 5
+# index = python.index("n", index + 1) # 첫 번째 위치에 +1 인덱스부터 다음 "n" 위치
+# print(index) # 15
+
+# print(python.find("Java")) # find() 인덱스 위치 값 찾기
+# # 단, find()는 없는 값을 입력 시 -1 반환
+
+# # print(python.index("Java")) # index()는 없는 값을 입력 시 에러 발생 후 종료
+# print(python.count("n")) # count() 존재하는 문자 개수 반환 2
+ 
