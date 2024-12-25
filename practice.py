@@ -3,10 +3,12 @@
 # print(2*8)
 # print(3 * (3+1))
 
+
 # - 문자 자료형
 # print('풍선')
 # print("ㅋㅋㅋㅋㅋㅋㅋㅋㅋ")
 # print("ㅋ" * 9)
+
 
 # - 참 / 거짓
 # print(5>10)
@@ -45,6 +47,7 @@
 # station = "인천공항"
 # print(station + "행 열차가 들어오고 있습니다.")
 
+
 # - 연산자
 # print(1+1) # 2
 # print(3-2) # 1
@@ -78,6 +81,7 @@
 # print(5 > 4 > 3) # True 모두 참이기 때문에
 # print(5 > 4 > 7) # False (4 > 7) 이 거짓이기 떄문에 False
 
+
 # - 간단한 수식
 # number = 2 + 3 * 4 # 14
 # number += 2 # number = number +2 16
@@ -91,6 +95,7 @@
 # number //= 2 # 1.0
 # print(number)
 
+
 # - 숫자처리함수
 # 절대값 구하기 abs()
 # print(abs(-5)) # 5
@@ -103,11 +108,13 @@
 # print(round(3.14))# 3
 # print(round(4.99)) # 5
 
+
 # - math 라이브러리 함수
 # from math import *
 # print(floor(4.99)) # 내림. 4
 # print(ceil(3.14)) # 올림. 4
 # print(sqrt(16)) # 제곱근. 4
+
 
 # - Random 함수
 # from random import *
@@ -144,6 +151,7 @@
 # date = randint(4, 28)
 # print("오프라인 스터디 모임 날짜는 매월 " + str(date) + " 일로 선정되었습니다.")
 
+
 # - 문자열
 # sentence = '나는 소년입니다'
 # print(sentence)
@@ -154,6 +162,7 @@
 # 파이썬은 쉬워요
 # """
 # print(sentece3)
+
 
 # - 슬라이싱
 # jumin = "990120-1234567"
@@ -166,6 +175,7 @@
 # print("생년월일: " + jumin[:6]) # 처음부터 6 직전까지 (0 1 2 3 4 5)
 # print("뒤 7자리: " + jumin[7:]) # 7 부터 끝까지
 # print("뒤 7자리 (뒤에부터): " + jumin[-7:]) # 맨 뒤(-1)에서 7번째부터 끝까지
+
 
 # - 문자열 처리함수
 # python = "Python is Amazing"
@@ -185,6 +195,7 @@
 
 # # print(python.index("Java")) # index()는 없는 값을 입력 시 에러 발생 후 종료
 # print(python.count("n")) # count() 존재하는 문자 개수 반환 2
+
 
 # - 문자열 포맷
 # print("a" + "b")
@@ -209,6 +220,117 @@
 # print("나는 {age}살이며, {color}색을 좋아해요".format(color="빨간", age = 20))
 
 # 방법 4 (v3.6 이상~) f"" 변수 사용
-age = 20
-color = "빨간"
-print(f"나는 {age}살이며, {color}색을 좋아해요")
+# age = 20
+# color = "빨간"
+# print(f"나는 {age}살이며, {color}색을 좋아해요")
+
+
+# - 탈출 문자
+# print("백문이 불어일견\n백견이 불여일타") # \n 줄바꿈
+
+# 저는 "나도코딩"입니다.
+# print("저는 '나도코딩'입니다.")
+# print('저는 "나도코딩"입니다.')
+# print("저는 \"나도코딩\"입니다.") # \" 따옴표 출력을 위한 \
+# print("저는 \'나도코딩\'입니다.") # \' 작은따옴표 출력을 위한 \
+
+# \\ : 문장 내에서 \
+# print("C:\\Users\\ksunm\\Desktop\\PythonWorkspace>")
+
+# \r : 커서를 맨 앞으로 이동
+# print("Red Apple\rPine") # PineApple
+
+# \b : 백스페이스 (한 글자 삭제)
+# print("Redd\bApple") # RedApple
+
+# \t : 탭
+# print("Red\tApple") # Red     Apple
+
+# Quiz) 사이트별로 비밀번호를 만들어 주는 프로그램을 작성하시오
+
+# 예) http://naver.com
+# 규칙1 : http:// 부분은 제외 => naver.com
+# 규칙2 : 처음 만나는 점(.) 이후 부분은 제외 => naver
+# 규칙3 : 남은 글자 중 처음 세자리 = 글자 갯수 + 글자 내 'e' 갯수 + "!"로 구성
+#                   (nav)             (5)           (1)             (!)
+
+# 예) 생성된 비밀번호 : nav51!
+# url = "http://naver.com"
+# url = "http://youtube.com"
+# pw = url.replace("http://", "") # 규칙 1  -> naver.com
+# pw = pw[:pw.index(".")] # pw[0:5] -> 0 ~ 5 직전까지. (0 1 2 3 4) -> naver
+# pw = pw[:3] + str(len(pw)) + str(pw.count("e")) + "!"
+# # print("{0} 의 비밀번호는 {1} 입니다.".format(url, pw))
+# print(f"{url} 의 비밀번호는 {pw} 입니다.")
+
+
+# - 리스트 [] : 순서를 가지는 객체의 집합
+
+# 지하철 칸별로 10명, 20명, 30명
+# subway1 = 10
+# subway2 = 20
+# subway3 = 30
+
+# subway = [10, 20, 30]
+# print(subway)
+
+# subway = ["유재석", "조세호", "박명수"]
+# print(subway)
+
+# # 조세호씨가 몇 번째 칸에 타고 있는가?
+# print(subway.index("조세호"))
+
+# # append() 맨 뒤에 추가
+# # 하하씨가 다음 정류장에서 다음 칸에 탐 
+# subway.append("하하")
+# print(subway)
+
+# insert() 추가할 인덱스 위치, 추가될 값
+# 정형돈씨를 유재석 / 조세호 사이에 태워봄
+# subway.insert(1, "정형돈")
+# print(subway)
+
+# pop() 맨 뒤에 빼기
+# 지하철에 있는 사람을 한 명씩 뒤에서 꺼냄
+# print(subway.pop()) 
+# print(subway)
+
+# print(subway.pop()) 
+# print(subway)
+
+# print(subway.pop()) 
+# print(subway)
+
+# count() 개수 확인
+# 같은 이름의 사람이 몇 명 있는지 확인
+# subway.append("유재석")
+# print(subway)
+# print(subway.count("유재석"))
+
+# sort() 정렬
+# 정렬도 가능
+# num_list = [5,2,4,3,1]
+# num_list.sort()
+# print(num_list) # [1, 2, 3, 4, 5]
+
+# reverse()
+# 순서 뒤집기 가능
+# num_list.reverse()
+# print(num_list) # [5, 4, 3, 2, 1]
+
+# clear()
+# 모두 지우기
+# num_list.clear()
+# print(num_list) # []
+
+# 다양한 자료형 함께 사용 가능
+# num_list = [5,2,4,3,1]
+# mix_list = ["조세호", 20, True]
+# # print(mix_list) # ['조세호', 20, True]
+
+# # extend() 리스트 확장
+# num_list.extend(mix_list)
+# print(num_list)
+
+
+# - 사전
