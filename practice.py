@@ -333,4 +333,48 @@
 # print(num_list)
 
 
-# - 사전
+# - 사전(Dictionary) (key 정렬, 중복 허용 x) 키: 값 형태
+# cabinet = {3: "유재석", 100: "김태호"}
+# print(cabinet[3])
+# print(cabinet[100])
+
+# print(cabinet.get(3))
+# print(cabinet[5]) # [] 방식은 입력한 키가 존재하지 않을 때 에러발생
+# print(cabinet.get(5)) # get() 방식은 입력한 키가 존재하지 않을 때 None
+# print(cabinet.get(5, "사용 가능")) # 키 값이 없으면 "사용 가능"
+# print("hi")
+
+# in 존재여부 key in Dictionary명 (True, False)
+# print(3 in cabinet) # True
+# print(5 in cabinet) # False
+
+# key 값은 정수형이 아니여도 가능
+cabinet = {"A-3": "유재석", "B-100": "김태호"}
+print(cabinet["A-3"])
+print(cabinet["B-100"])
+
+# 새 손님 (추가)
+print(cabinet)
+cabinet["A-3"] = "김종국" # "A-3"  키 값이 존재해서 덮어쓰기
+cabinet["C-20"] = "조세호" # "C-20" 키 값이 없기에 추가
+print(cabinet)
+
+# 간 손님 (삭제) del
+del cabinet["A-3"]
+print(cabinet)
+
+# key 들만 출력 keys()
+print(cabinet.keys()) # dict_keys(['B-100', 'C-20'])
+
+# value 들만 출력 values()
+print(cabinet.values()) # dict_values(['김태호', '조세호'])
+ 
+# key, value 쌍으로 출력 items() 
+print(cabinet.items()) # dict_items([('B-100', '김태호'), ('C-20', '조세호')])
+
+# 목욕탕 폐점 (모두 삭제) clear()
+cabinet.clear()
+print(cabinet) # {}
+
+
+
