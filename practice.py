@@ -419,3 +419,32 @@
 # # 삭제 : remove() (java 를 잊었어요)
 # java.remove("김태호")
 # print(java)
+
+
+# - 자료구조의 변경
+# 커피숍
+# menu = {"커피", "우유", "주스"}
+# print(menu, type(menu)) # set
+
+# menu = list(menu) # set -> list로 변환
+# print(menu, type(menu)) # list
+
+# menu = tuple(menu) # list -> tuple
+# print(menu, type(menu)) # tuple
+
+# menu = set(menu) # typle -> set
+# print(menu, type(menu)) # tuple
+
+# Dictionary 는 key(), values(), items()를 사용해야함
+# menu2 = {"커피": 3000, "우유": 1000, "주스": 2000}
+# print(menu2, type(menu2)) # dict
+
+# menu2 = list(menu2.items()) # dict_items -> list
+# print(menu2, type(menu2)) # list
+
+# menu2 = set(menu2.values()) # dict_values -> set
+# print(menu2, type(menu2)) # set
+
+# menu2 = tuple(menu2.keys()) # dict_values -> tuple
+# print(menu2, type(menu2)) # tuple
+
