@@ -164,7 +164,7 @@
 # print(sentece3)
 
 
-# - 슬라이싱
+# - 문자열 슬라이싱
 # jumin = "990120-1234567"
 
 # print("성별: " + jumin[7]) # 인덱스는 0부터, 7번째를 가져옴
@@ -349,32 +349,46 @@
 # print(5 in cabinet) # False
 
 # key 값은 정수형이 아니여도 가능
-cabinet = {"A-3": "유재석", "B-100": "김태호"}
-print(cabinet["A-3"])
-print(cabinet["B-100"])
+# cabinet = {"A-3": "유재석", "B-100": "김태호"}
+# print(cabinet["A-3"])
+# print(cabinet["B-100"])
 
-# 새 손님 (추가)
-print(cabinet)
-cabinet["A-3"] = "김종국" # "A-3"  키 값이 존재해서 덮어쓰기
-cabinet["C-20"] = "조세호" # "C-20" 키 값이 없기에 추가
-print(cabinet)
+# # 새 손님 (추가)
+# print(cabinet)
+# cabinet["A-3"] = "김종국" # "A-3"  키 값이 존재해서 덮어쓰기
+# cabinet["C-20"] = "조세호" # "C-20" 키 값이 없기에 추가
+# print(cabinet)
 
-# 간 손님 (삭제) del
-del cabinet["A-3"]
-print(cabinet)
+# # 간 손님 (삭제) del
+# del cabinet["A-3"]
+# print(cabinet)
 
-# key 들만 출력 keys()
-print(cabinet.keys()) # dict_keys(['B-100', 'C-20'])
+# # key 들만 출력 keys()
+# print(cabinet.keys()) # dict_keys(['B-100', 'C-20'])
 
-# value 들만 출력 values()
-print(cabinet.values()) # dict_values(['김태호', '조세호'])
+# # value 들만 출력 values()
+# print(cabinet.values()) # dict_values(['김태호', '조세호'])
  
-# key, value 쌍으로 출력 items() 
-print(cabinet.items()) # dict_items([('B-100', '김태호'), ('C-20', '조세호')])
+# # key, value 쌍으로 출력 items() 
+# print(cabinet.items()) # dict_items([('B-100', '김태호'), ('C-20', '조세호')])
 
-# 목욕탕 폐점 (모두 삭제) clear()
-cabinet.clear()
-print(cabinet) # {}
+# # 목욕탕 폐점 (모두 삭제) clear()
+# cabinet.clear()
+# print(cabinet) # {}
 
 
+# - 튜플 : 리스트와 다르게 내용 변경 및 추가 불가능, 속도가 리스트보다 빠름, 변경되지 않는 목록에 사용
+menu = ("돈까스", "치즈까스") # ()
+print(menu[0])
+print(menu[1])
+
+# menu.add("생선까스") # Error
+
+# name = "김종국"
+# age = 20
+# hobby = "코딩"
+# print(name, age, hobby)
+
+(name, age, hobby) = ("김종국", 20, "코딩") # Tuple Unpacking, 변수 선언과 동시에 할당이 이루어짐
+print(name, age, hobby)
 
