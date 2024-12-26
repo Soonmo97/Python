@@ -378,17 +378,44 @@
 
 
 # - 튜플 : 리스트와 다르게 내용 변경 및 추가 불가능, 속도가 리스트보다 빠름, 변경되지 않는 목록에 사용
-menu = ("돈까스", "치즈까스") # ()
-print(menu[0])
-print(menu[1])
+# menu = ("돈까스", "치즈까스") # ()
+# print(menu[0])
+# print(menu[1])
 
-# menu.add("생선까스") # Error
+# # menu.add("생선까스") # Error
 
-# name = "김종국"
-# age = 20
-# hobby = "코딩"
+# # name = "김종국"
+# # age = 20
+# # hobby = "코딩"
+# # print(name, age, hobby)
+
+# (name, age, hobby) = ("김종국", 20, "코딩") # Tuple Unpacking, 변수 선언과 동시에 할당이 이루어짐
 # print(name, age, hobby)
 
-(name, age, hobby) = ("김종국", 20, "코딩") # Tuple Unpacking, 변수 선언과 동시에 할당이 이루어짐
-print(name, age, hobby)
 
+# - 집합 (Set) : 중복 안됨, 순서 없음
+# my_set = {1, 2, 3, 3, 3}
+# print(my_set) # {1, 2, 3}
+
+# java = {"유재석", "김태호", "양세형"}
+# python = set(["유재석", "박명수"]) # list로 생성 후 set()으로 감싸기 가능
+
+# # 교집합 : &, intersection() (java 와 python 을 모두 할 수 있는 개발자)
+# print(java & python)
+# print(java.intersection(python))
+
+# # 합집합 : |, union() (java 도 할 수 있거나 python 할 수 있는 개발자)
+# print(java | python)
+# print(java.union(python))
+
+# # 차집합 : -, difference() (java 를 할 수 잇지만 python 은 할 줄 모르는 개발자)
+# print(java - python)
+# print(java.difference(python))
+
+# # 추가 : add() (python 할 줄 아는 사람이 늘어남)
+# python.add("김태호")
+# print(python)
+
+# # 삭제 : remove() (java 를 잊었어요)
+# java.remove("김태호")
+# print(java)
