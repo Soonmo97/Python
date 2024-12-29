@@ -1,4 +1,4 @@
-c# - 숫자 자료형
+# - 숫자 자료형
 # print(5)
 # print(2*8)
 # print(3 * (3+1))
@@ -554,5 +554,17 @@ c# - 숫자 자료형
 # while person != customer:
 #     print(f"{customer}, 커피가 준비되었습니다.")
 #     person = input("이름이 어떻게 되세요? ")
+
+
+# - continue 와 break (생략과 종료)
+# absent = [2, 5] # 결석
+# no_book = [7] # 책을 깜빡했음
+# for student in range(1, 11): # 1 ~ 10
+#     if student in absent: # in list
+#         continue
+#     elif student in no_book:
+#         print(f"오늘 수업 여기까지, {student}는 교무실로 따라와")
+#         break
+#     print(f"{student}, 책을 읽어봐")
 
 
