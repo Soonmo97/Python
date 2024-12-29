@@ -1,4 +1,4 @@
-# - 숫자 자료형
+c# - 숫자 자료형
 # print(5)
 # print(2*8)
 # print(3 * (3+1))
@@ -219,7 +219,7 @@
 # print("나는 {age}살이며, {color}색을 좋아해요".format(age = 20, color="빨간"))
 # print("나는 {age}살이며, {color}색을 좋아해요".format(color="빨간", age = 20))
 
-# 방법 4 (v3.6 이상~) f"" 변수 사용
+# 방법 4 f-string (v3.6 이상~) f"" 변수 사용
 # age = 20
 # color = "빨간"
 # print(f"나는 {age}살이며, {color}색을 좋아해요")
@@ -530,5 +530,29 @@
 # starbucks = ["아이언맨", "토르", "아이엠 그루트"]
 # for customer in starbucks:
 #     print(f"{customer}, 커피가 준비되었습니다.")
+
+
+# - while
+# customer = "토르"
+# index = 5
+# while index >= 1:
+#     print(f"{customer}, 커피가 준비되었습니다. {index}")
+#     index -= 1
+#     if index == 0:
+#         print("커피는 폐기처분 되었습니다.") 
+
+# customer = "아이언맨"
+# index = 1
+# while True:
+#     print(f"{customer}, 커피가 준비되었습니다. 호출 {index} 회")
+#     index += 1
+
+# 문자열, input()으로 제어
+# customer = "토르"
+# person = "Unknown"
+
+# while person != customer:
+#     print(f"{customer}, 커피가 준비되었습니다.")
+#     person = input("이름이 어떻게 되세요? ")
 
 
