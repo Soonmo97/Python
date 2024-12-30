@@ -679,6 +679,7 @@
 #     print(lang1, lang2, lang3, lang4, lang5)
 
 # def profile(name, age, *language): # 서로 다른 개수의 값을 넣어줄 때 *매개변수 가변인자
+# language 는 Tuple 형태로 받아옴
 #     print(f"이름 : {name}\t나이 : {age}\t", end=" ")
 #     for lang in language:
 #         print(lang, end=" ")
@@ -686,3 +687,25 @@
 
 # profile("유재석", 20, "Python", "Java", "C", "C++", "C#", "JavaScript")
 # profile("김태호", 25, "Kotlin", "Swift")
+
+
+# - 지역변수와 전역변수(global)
+# 함수 내에서 전역변수 접근은 global
+# 가급적 전역변수를 직접 사용하기보다는 매개변수로 넘겨줘서 
+# 반환값을 사용하는 것이 좋음
+gun = 10
+
+def checkpoint(soldiers): # 경계근무
+    global gun # 전역 공간에 있는 gun 사용
+    gun = gun - soldiers
+    print(f"[함수 내] 남은 총 : {gun}")
+
+def checkpoint_ret(gun, soldiers):
+    gun = gun - soldiers
+    print(f"[함수 내] 남은 총 : {gun}")
+    return gun
+
+print(f"전체 총 : {gun}")
+checkpoint(2) # 2명이 경계근무 나감
+gun = checkpoint_ret(gun, 2)
+print(f"남은 총 : {gun}")
