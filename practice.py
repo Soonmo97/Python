@@ -613,3 +613,10 @@
 #         print(f"[ ] {i}번째 손님 (소요시간 : {time}분 ")
 
 # print(f"총 탑승 승객 : {cnt} 분")
+
+
+# - 함수
+def open_account():
+    print("새로운 계좌가 생성되었습니다.")
+
+open_account()
