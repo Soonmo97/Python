@@ -672,3 +672,17 @@
 # profile(name="유재석", main_lang="파이썬", age=20)
 # profile(main_lang="파이썬", age=25, name="김태호")
 
+
+# - 가변인자
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print(f"이름 : {name}\t나이 : {age}\t", end=" ") # end=" " 다음 문장 줄바꿈 없이 이어서
+#     print(lang1, lang2, lang3, lang4, lang5)
+
+# def profile(name, age, *language): # 서로 다른 개수의 값을 넣어줄 때 *매개변수 가변인자
+#     print(f"이름 : {name}\t나이 : {age}\t", end=" ")
+#     for lang in language:
+#         print(lang, end=" ")
+#     print() # 줄바꿈
+
+# profile("유재석", 20, "Python", "Java", "C", "C++", "C#", "JavaScript")
+# profile("김태호", 25, "Kotlin", "Swift")
