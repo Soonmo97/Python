@@ -804,3 +804,50 @@
 
 # # 소수점 특정 자리 수 까지만 표시 (소수점 3째 자리에서 반올림)
 # print("{0:.2f}".format(5/3)) # 1.67
+
+
+# - 파일입출력
+# open() 열기, w: write 생성
+# score_file = open("score.txt", "w", encoding="utf-8") # utf-8 한글설정
+# print("수학 : 0", file = score_file)
+# print("영어 : 50", file = score_file)
+# score_file.close() # 파일 닫기
+# score.text 파일이 생김
+
+# "a": append 이어서 쓰기
+# score_file = open("score.txt", "a", encoding="utf8")
+# score_file.write("과학 : 80")
+# score_file.write("\n코딩 : 100")
+# score_file.close()
+# score.text 파일에 이어서 작성됨
+
+# "r": read 파일 읽기
+# score_file = open("score.txt", "r", encoding="utf-8")
+# print(score_file.read()) # 한 번에 읽어옴
+# score_file.close()
+# --- 출력결과 ---
+# 수학 : 0
+# 영어 : 50
+# 과학 : 80
+# 코딩 : 100
+
+# score_file = open("score.txt", "r", encoding="utf-8")
+# print(score_file.readline(), end="") # 줄별로 읽기, 한 줄 읽고 커서는 다음 줄로 이동
+# print(score_file.readline(), end="")
+# print(score_file.readline(), end="")
+# print(score_file.readline(), end="")
+# score_file.close()
+
+# score_file = open("score.txt", "r", encoding="utf-8")
+# while True:
+#     line = score_file.readline()
+#     if not line:
+#         break
+#     print(line, end="")
+# score_file.close()
+
+# score_file = open("score.txt", "r", encoding="utf-8")
+# lines = score_file.readlines() # list 형태로 저장
+# for line in lines:
+#     print(line, end="")
+# score_file.close()
