@@ -851,3 +851,18 @@
 # for line in lines:
 #     print(line, end="")
 # score_file.close()
+
+
+# - Pickle
+# 파일에 정보를 저장하고 읽어올 수 있도록 도와주는 라이브러리
+# import pickle
+# profile_file = open("profile.pickle", "wb") # 인코딩 설정 필요없음
+# profile = {"이름": "박명수", "나이": 30, "취미": ["축구", "골프", "코딩"]}
+# print(profile)
+# pickle.dump(profile, profile_file) # profile 에 있는 정보를 file 에 저장
+# profile_file.close()
+
+# profile_file = open("profile.pickle", "rb")
+# profile = pickle.load(profile_file) # file에 있는 정보를 profile 에 불러오기
+# print(profile) # {'이름': '박명수', '나이': 30, '취미': ['축구', '골프', '코딩']}
+# profile_file.close()
