@@ -739,3 +739,38 @@
 # print(f"키 {height}cm {gender}의 표준 체중은 {weight}kg 입니다.")
 
 
+# - 표준 입출력
+# sep="" : 사이에 들어갈 문자 지정
+# print("Python", "Java", sep=" vs ") # Python vs Java
+# # end="" : 문장의 끝을 바꾸기 (줄바꿈 없어짐)
+# print("Python", "Java", end="?") # Python Java?무엇이 더 재밌을까요?
+# print("무엇이 더 재밌을까요?")
+
+# import sys
+# print("Python", "Java", file=sys.stdout) # stdout 표준출력
+# print("Python", "Java", file=sys.stderr) # stderr 표준에러
+
+# 시험 성적
+# scores = {"수학": 0, "영어": 50, "코딩": 100}
+# for subject, score in scores.items(): # key와 value가 각각 담김
+    # print(subject, score) # 수학 0
+                            # 영어 50
+                            # 코딩 100
+    
+    # ljust(8) : 8칸 공간확보 후 왼쪽 정렬
+    # rjust(4) : 4칸 공간확보 후 오른쪽 정렬
+    # int -> str(int) 필요
+    # print(subject.ljust(8), str(score).rjust(4), sep=":") 
+
+# 은행 대기순번표
+# 001, 002, 003, ...
+# for num in range(1, 21) : # 1 ~ 20
+#     # zfill(3) : 3칸 공간확보 후 채움, 빈 공간은 0으로 채움
+#     ex) 대기번호 : 020
+#     print("대기번호 : " + str(num).zfill(3))
+
+
+# input(): 항상 문자열로 저장 (int를 넣어도)
+# answer = input("아무 값이나 입력하세요 : ")
+# print(type(answer))
+# print("입력하신 값은 " + answer + "입니다.")
