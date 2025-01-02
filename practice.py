@@ -926,9 +926,15 @@
 # attack(tank_name, "1시", tank_damage)
 # 위와 같은 방식으로 작성하면 유닛의 수가 많아질수록 코드가 무수히 길어지기에 클래스 필요
 
-# 클래스 생성
+# 클래스 생성, __init__
+# __init__ : 생성자, self를 제외한 매개변수와 동일한 개수와 순서로 인자를 전달해야함(기본값 지정 가능)
+# self 는 Python 클래스에서 인스턴스 자신을 참조하는 특별한 매개변수.
+# self가 필요한 이유:
+# 인스턴스 변수 접근 - 클래스 내부에서 객체 고유의 데이터를 저장하거나 변경하려면 self를 통해 인스턴스 변수에 접근해야 한다.
+# 다른 메서드 호출 - 클래스 내부에서 다른 메서드를 호출할 때도 self를 사용해야 한다.
+
 # class Unit:
-#     def __init__ (self, name, hp, damage):
+#     def __init__ (self, name, hp, damage): 
 #         self.name = name
 #         self.hp = hp
 #         self.damage = damage
@@ -938,3 +944,7 @@
 # marine1 = Unit("마린", 40, 5)
 # marine2 = Unit("마린", 40, 5)
 # tank = Unit("탱크", 150, 35)
+
+
+
+
