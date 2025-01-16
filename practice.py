@@ -933,13 +933,13 @@
 # 인스턴스 변수 접근 - 클래스 내부에서 객체 고유의 데이터를 저장하거나 변경하려면 self를 통해 인스턴스 변수에 접근해야 한다.
 # 다른 메서드 호출 - 클래스 내부에서 다른 메서드를 호출할 때도 self를 사용해야 한다.
 
-class Unit:
-    def __init__ (self, name, hp, damage): 
-        self.name = name
-        self.hp = hp
-        self.damage = damage
-        print(f"{self.name} 유닛이 생성되었습니다.")
-        print(f"체력 {self.hp}, 공격력{self.damage}")
+# class Unit:
+#     def __init__ (self, name, hp, damage): 
+#         self.name = name
+#         self.hp = hp
+#         self.damage = damage
+#         print(f"{self.name} 유닛이 생성되었습니다.")
+#         print(f"체력 {self.hp}, 공격력{self.damage}")
 
 # marine1 = Unit("마린", 40, 5)
 # marine2 = Unit("마린", 40, 5)
@@ -959,13 +959,18 @@ class Unit:
 #     print(f"{wraith2.name} 는 클로킹 상태입니다.")
 
 
-# - 메소드
+# - 메소드, 상속
 
-# 공격 유닛
-# class AttackUnit:
-#     def __init__ (self, name, hp, damage): 
+# 일반 유닛
+# class Unit:
+#     def __init__ (self, name, hp): 
 #         self.name = name
 #         self.hp = hp
+
+# # 공격 유닛
+# class AttackUnit(Unit):
+#     def __init__ (self, name, hp, damage): 
+#         Unit.__init__(self, name, hp)
 #         self.damage = damage
     
 #     def attack(self, location):
@@ -978,12 +983,16 @@ class Unit:
 #         if self.hp <= 0:
 #             print(f"{self.name} : 파괴되었습니다.")
 
-# # 파이어뱃: 공격 유닛, 화염방사기.
+# # # 파이어뱃: 공격 유닛, 화염방사기.
 # firebat1 = AttackUnit("파이어뱃", 50, 16)
 # firebat1.attack("5시")
 
-# # 공격 2번 받는다고 가정
+# # # 공격 2번 받는다고 가정
 # firebat1.damaged(25)
 # firebat1.damaged(25)
+
+
+
+
 
 
