@@ -1022,20 +1022,27 @@ class FlyableAttackUnit(AttackUnit, Flyable):
 # battlecruiser.move("9시")
 
 
-# - pass
+# - pass, super
 # 건물
 class BuildingUnit(Unit):
     def __init__(self, name, hp, location):
-        pass
+        # pass
+        # Unit.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0) 
+        # super 는 () 추가 및 self 생략
+        # 단, 다중 상속시에는 super()는 맨 처음 클래스의 생성자 하나만 호출되므로
+        # Unit.__init__과 같은 방식으로 따로 모두 호출해야함
+        # practice_class.py 파일 참고
+        self.location = location
 
 # 서플라이 디폿 : 건물, 1개 건물 = 8 유닛.
-supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
+# supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
 
-def game_start():
-    print("[알림] 새로운 게임을 시작합니다.")
+# def game_start():
+#     print("[알림] 새로운 게임을 시작합니다.")
 
-def game_over():
-    pass
+# def game_over():
+#     pass
 
-game_start()
-game_over()
+# game_start()
+# game_over()
